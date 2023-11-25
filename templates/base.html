@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>e-Market</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+{% if user.is_authenticated%}
+    <div class="header">
+            <div class="header-name">
+                <a href="{%url 'home'%}" id="button-1">Home</a>
+            </div>
+            <div class="sign">
+                <a href="{%url 'logout'%}" id="button-1">Log out</a>
+            </div>
+            <div class="create-new">
+                <a href="{%url 'create_post'%}" id="button-2">Create Product</a>
+            </div>
+    </div>
+{%else%}
+    <div class="header">
+            <div class="header-name">
+                <a href="{%url 'home'%}" id="button-1">Home</a>
+            </div>
+            <div class="sign">
+                <a href="{%url 'login'%}" id="button-1">Log in</a>
+                <a href="{%url 'signup'%}" id="button-1">Sign up</a>
+            </div>
+    </div>
+{%endif%}
+    {%block content%}
+
+    {%endblock content%}
+</body>
+</html>

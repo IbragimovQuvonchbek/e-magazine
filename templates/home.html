@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>e-Market</title>
+
+</head>
+<body>
+    {%extends 'base.html'%}
+    {%block content%}
+    <div class="container">
+            {%for post in object_list%}
+            <div class="product_post">
+            <img src="{{ post.photo.url }}" alt="prodcut">
+            <h3>{{post.name}}</h3>
+            <h4>{{post.description}}</h4>
+            <h5>price {{post.price}}$</h5>
+            </div>
+            {%endfor%}
+    </div>
+    {%endblock content%}
+</body>
+</html>
