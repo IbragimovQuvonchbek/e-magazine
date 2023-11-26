@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>e-Market</title>
-
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     {%extends 'base.html'%}
     {%block content%}
-    <div class="container">
+    <div id="container">
             {%for post in object_list%}
             <div class="product_post">
             <img src="{{ post.photo.url }}" alt="prodcut">

@@ -3,10 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body{
+    overflow: hidden;
     height:60vw;
     margin:0px;
     padding:0px;
-    background: url(https://wallpaper-house.com/data/out/8/wallpaper2you_256828.png) no-repeat center center fixed; 
+    background: url(https://img.freepik.com/premium-vector/abstract-transparent-circles-with-shadow-white-grey-background_291930-617.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -22,6 +23,7 @@ body{
     background-color: rgba(0, 0, 0, 0.85);
     height: 50px;
     width:100%;
+    z-index:1;
 }
 .header-name{
     float:left;
@@ -157,9 +159,9 @@ a{
     --radii: 0.5em;
     cursor: pointer;
     /* padding: 0.9em 1.4em; */
-    width: 10vw;
-    height: 4vw;
-    font-size: 1.5vw;
+    width: 120px;
+    height: 30px;
+    /* font-size: 1.5vw; */
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 900;
     text-align: center;
@@ -197,4 +199,61 @@ a{
 .con-header{
     margin:20px 0px 0px 0px;
     padding:0;
+}
+
+
+.sign-up_container{
+    color:white;
+    /* z-index:-1; */
+    position:relative;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    top:18%;
+    width:450px;
+    height:460px;
+    margin:auto;
+    /* border:1px solid black; */
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.5),
+    0px 0px 10px rgb(0, 0, 0, 0.5);
+    text-align: center;
+}
+.sign-up_container li{
+    list-style-type: none;
+    color: rgb(160, 160, 160);
+
+}
+.sign-up_container span{
+    display:block;
+    color: rgb(160, 160, 160);
+}
+.sign-up_container input{
+    display:block;
+    margin-top:20px;
+    
+
+    color:white;
+    background-color: rgb(92, 92, 92, 0.4);
+    border:1px solid rgb(120, 120, 120);
+    border-radius:8px;
+    /* padding:1vw; */
+    height:18px;
+    width:200px;
+    margin: auto;
+}
+
+.sign-up_container label{
+    font-weight:bold;
+}
+.footer{
+    /* color:white; */
+    position:fixed;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 50px;
+    width:100%;
+    z-index:1;
+}
+.footer p{
+    color:rgb(161, 161, 161);
+    text-align: center;
 }
