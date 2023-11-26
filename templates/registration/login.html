@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
     <link rel="stylesheet" href="/static/style.css">
     <style>
@@ -88,6 +87,26 @@
                 transition: linear;
             }
         }
+        @media screen and (max-width: 480px) {
+            .log-in_container{
+                width:300px;
+                height: 460px;
+            }
+            .log-in_container span{
+                font-size: 9px;
+            }
+          
+            .log-in_container li{
+                font-size: 9px;
+                margin-left:0;
+            }
+            .footer{
+                font-size:12px;
+            }
+            .log-in_container input{
+                width:200px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -99,7 +118,7 @@
         <form action="" method="post">
             {%csrf_token%}
             {{form.as_p}}
-            <button type="submit" class="btn-donate">log in</button>
+            <button type="submit" class="btn-donate">Log in</button>
         </form>
     </div>
     
