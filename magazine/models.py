@@ -5,7 +5,7 @@ from django.urls import reverse
 class Post(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
-    price = models.IntegerField()
+    price = models.PositiveIntegerField()
     photo = models.ImageField(upload_to='images/', blank=True, null=True)
 
     def __str__(self):
