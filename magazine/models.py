@@ -18,4 +18,4 @@ class Post(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('full_post', args=[str(self.pk)])
