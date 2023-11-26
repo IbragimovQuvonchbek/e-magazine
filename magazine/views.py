@@ -1,6 +1,6 @@
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post
 
 
@@ -9,10 +9,14 @@ class HomePageView(ListView):
     template_name = 'home.html'
 
 
-class CreatePostView(CreateView):
+class CreatePostView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'create_post.html'
     fields = ['name', 'description', 'price', 'photo']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class FullPostViews(DetailView):

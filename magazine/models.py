@@ -1,15 +1,13 @@
 from django.db import models
 from django.urls import reverse
-
+from django.contrib.auth import get_user_model
 
 class Post(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
     author = models.ForeignKey(
-        'auth.User',
+        get_user_model(),
         on_delete=models.CASCADE,
-        blank=True,
-        null=True,
     )
     price = models.PositiveIntegerField()
     photo = models.ImageField(upload_to='images/', blank=True, null=True)
