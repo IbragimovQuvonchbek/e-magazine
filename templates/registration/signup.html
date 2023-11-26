@@ -5,6 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .sign-up_container{
+    color:white;
+    /* z-index:-1; */
+    position:relative;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    top:18%;
+    width:450px;
+    height:460px;
+    margin:auto;
+    /* border:1px solid black; */
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.5),
+    0px 0px 10px rgb(0, 0, 0, 0.5);
+    text-align: center;
+}
+.sign-up_container li{
+    list-style-type: none;
+    color: rgb(160, 160, 160);
+
+}
+.sign-up_container span{
+    display:block;
+    color: rgb(160, 160, 160);
+}
+.sign-up_container input{
+    display:block;
+    margin-top:20px;
+
+
+    color:white;
+    background-color: rgb(92, 92, 92, 0.4);
+    border:1px solid rgb(120, 120, 120);
+    border-radius:8px;
+    /* padding:1vw; */
+    height:18px;
+    width:200px;
+    margin: auto;
+}
+
+.sign-up_container label{
+    font-weight:bold;
+}
+    </style>
 </head>
 <body>
     {%extends 'base.html'%}
@@ -17,7 +61,7 @@
             <button type="submit" class="btn-donate">Register</button>
         </form>
     </div>
-    
-    {%endblock content%}
+
 </body>
+    {%endblock content%}
 </html>
