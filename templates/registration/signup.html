@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <link rel="stylesheet" href="/static/style.css">
     <style>
@@ -29,11 +28,23 @@
             0px 0px 10px rgb(0, 0, 0, 0.5);
             text-align: center;
         }
-        .sign-up_container li{
+        .sign-up_container ul{
+            margin:0;
+            padding:0;
             list-style-type: none;
+            text-align:center;
+            display:block;
+            list-style-type: none;
+        }
+        .sign-up_container li{
+            margin:0;
+            padding-left:3px;
+            padding-right:3px;
+            display:block;
             color: rgb(160, 160, 160);
 
         }
+        
         .sign-up_container span{
             display:block;
             color: rgb(160, 160, 160);
@@ -92,6 +103,23 @@
         @media (prefers-reduced-motion: reduce) {
             .btn-donate {
                 transition: linear;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .sign-up_container{
+                width:300px;
+                height: 460px;
+            }
+            .sign-up_container span{
+                font-size: 9px;
+            }
+            
+            .sign-up_container li{
+                font-size: 9px;
+                margin-left:0;
+            }
+            .footer{
+                font-size:12px;
             }
         }
     </style>
