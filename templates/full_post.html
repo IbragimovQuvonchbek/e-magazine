@@ -3,15 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>e-Market</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@700&family=Nunito+Sans:opsz,wght@6..12,300&family=Rubik:wght@300;400&display=swap');
+
+        .post{
+            margin-top:65px;
+            gap:40px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom:50px;
+        }
+        .post-image_container{
+            margin-left: 20px;
+            width:580px;
+            float:left;
+            /* border: 1px solid black; */
+        }
+        .post-image_container img{
+            width:100%;
+            border-radius: 4px;
+            box-shadow: 0px 0px 30px rgb(0, 0, 0, 0.5),
+            0px 0px 60px rgb(0, 0, 0, 0.5);        
+        }
+        .post-text{
+            margin-right: 20px;
+            margin-top: 10px;
+            float:left;
+            margin-left:80px;
+            width:580px;
+            text-align:center;
+        }
+        .name-post{
+            margin:0;
+            font-size: 80px;
+            font-weight: 800;
+            font-family: 'Big Shoulders Text', sans-serif;
+
+        }
+        .post-price{
+            margin:0;
+            font-size: 40px;
+            font-weight: 100;
+            font-family: 'Big Shoulders Text', sans-serif;
+        }
+        .author-name{
+            margin-top:40px;
+            margin-bottom: 5px;
+            font-size: 50px;
+            font-weight: 100;
+            font-family: 'Big Shoulders Text', sans-serif;
+        }
+        @media screen and (max-width: 1300px) {
+            .post{
+                /* display:flex; */
+                align-items: center;
+            }
+            .post-text{
+                margin-top:20px;
+                margin-left:auto;
+                margin-right:auto;
+                float:none;
+            }
+            .post-image_container{
+                margin:auto;
+                float:none;
+                /* border: 1px solid black; */
+            }
+            .footer{
+                font-size:12px;
+            }
+        }
+    </style>
 </head>
 <body>
     {%extends 'base.html'%}
     {%block content%}
     <div class="post">
-        <img src="{{ post.photo.url }}" alt="prodcut">
-        <h2>{{post.name}}</h2>
-        <h3>{{post.author}}</h3>
-        <h2>{{post.description}}</h2>
+        <div class="post-image_container">
+            <img src="{{ post.photo.url }}" alt="prodcut">
+        </div>
+        <div class="post-text">
+            <p class="name-post">{{post.name}}</p>
+            <p class="post-price"> {{post.price}}$</p>
+            <p class="author-name">{{post.author}}</p>
+            <p>{{post.description}}</p>
+        </div>
     </div>
     <br>
     {%endblock content%}
