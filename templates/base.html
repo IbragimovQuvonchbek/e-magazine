@@ -132,11 +132,11 @@
         <div class="sign">
             <a href="{%url 'logout'%}" id="button-1">Log out</a>
         </div>
-
+        {% if user.is_staff %}
         <div class="create-new">
             <a href="{%url 'create_post'%}" id="button-2">Create Product</a>
         </div>
-        
+        {%endif%}
     </div>
     {%else%}
     <div class="header">
